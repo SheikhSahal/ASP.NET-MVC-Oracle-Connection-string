@@ -1,0 +1,117 @@
+Beq-local.world =
+  (DESCRIPTION = 
+    (ADDRESS_LIST = 
+        (ADDRESS = 
+          (COMMUNITY = beq.world)
+          (PROTOCOL = BEQ)
+          (PROGRAM = oracle73)
+          (ARGV0 = oracle73ORCL)
+          (ARGS = '(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))')
+        )
+    )
+    (CONNECT_DATA = (SID = ORCL)
+    )
+  )
+Tcp-loopback.world = 
+  (DESCRIPTION = 
+    (ADDRESS_LIST = 
+        (ADDRESS = 
+          (COMMUNITY = tcp.world)
+          (PROTOCOL = TCP)
+          (Host = 127.0.0.1)
+          (Port = 1521)
+        )
+    )
+    (CONNECT_DATA = (SID = ORCL)
+    )
+  )
+DBTEST = 
+  (DESCRIPTION = 
+    (ADDRESS_LIST = 
+        (ADDRESS = 
+          (COMMUNITY = tcp.world)
+          (PROTOCOL = TCP)
+          (Host = 192.168.3.243)
+          (Port = 1521)
+        )
+    )
+    (CONNECT_DATA = (SID = PSLUAT)
+    )
+  )
+PROD = 
+  (DESCRIPTION = 
+    (ADDRESS_LIST = 
+        (ADDRESS = 
+          (COMMUNITY = tcp.world)
+          (PROTOCOL = TCP)
+          (Host = 192.168.3.243)
+          (Port = 1521)
+        )
+    )
+    (CONNECT_DATA = (SID = PROD)
+    )
+  )
+AFGHANISTAN = 
+  (DESCRIPTION = 
+    (ADDRESS_LIST = 
+        (ADDRESS = 
+          (COMMUNITY = tcp.world)
+          (PROTOCOL = TCP)
+          (Host = 192.168.3.243)
+          (Port = 1521)
+        )
+    )
+    (CONNECT_DATA = (SID = PSLAFG)
+    )
+  )
+EMEA = 
+  (DESCRIPTION = 
+    (ADDRESS_LIST = 
+        (ADDRESS = 
+          (COMMUNITY = tcp.world)
+          (PROTOCOL = TCP)
+          (Host = 192.168.3.243)
+          (Port = 1521)
+        )
+    )
+    (CONNECT_DATA = (SID = PSLSUDAN)
+    )
+  )
+Example1.world = 
+  (DESCRIPTION = 
+    (ADDRESS_LIST = 
+        (ADDRESS = 
+          (COMMUNITY = tcp.world)
+          (PROTOCOL = TCP)
+          (Host = Production1)
+          (Port = 1521)
+        )
+    )
+    (CONNECT_DATA = (SID = SID1)
+    )
+  )
+Example2.world = 
+  (DESCRIPTION = 
+    (ADDRESS_LIST = 
+        (ADDRESS = 
+          (COMMUNITY = spx.world)
+          (PROTOCOL = SPX)
+          (Service = Server_lsnr)
+        )
+    )
+    (CONNECT_DATA = (SID = ORCL)
+    )
+  )
+Example3.world = 
+  (DESCRIPTION = 
+    (ADDRESS_LIST = 
+        (ADDRESS = 
+          (COMMUNITY = nmp.world)
+          (PROTOCOL = NMP)
+          (Server = FinanceServer1)
+          (Pipe = ORAPIPE)
+        )
+    )
+    (CONNECT_DATA = (SID = ORCL)
+    )
+  )
